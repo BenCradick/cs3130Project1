@@ -19,5 +19,15 @@ class Fibonacci_Numbers:
             self.count = self.count - 1
         return self.current
 
-fib_nums = Fibonacci_Numbers(10)
-print(fib_nums.fibonacci_iterative())
+
+results = open("CRAB1B/results.txt", "w")
+for k in range (1, 1000):
+    try:
+        Fib_Num = Fibonacci_Numbers(k)
+        result = Fib_Num.fibonacci_iterative()
+        print(f"F({k}) = {result}", file = results)
+    except RuntimeError:
+        
+        print(f"max iterative depth:\t {k-1}", file = results)
+        break
+results.close()
