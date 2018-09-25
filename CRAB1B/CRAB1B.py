@@ -16,7 +16,7 @@ def fibonacci_iterative(k) :
     return current
 
 results = open("CRAB1B/results.txt", "w")
-for k in range (1, 1000):
+for k in range (1, 50):
     try:
         
         result = fibonacci_iterative(k)

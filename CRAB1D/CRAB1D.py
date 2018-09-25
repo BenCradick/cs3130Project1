@@ -40,7 +40,7 @@ class BigIntFibonacci:
             if x%3 == 0:
                 formatted+=","
             formatted+=str(self.previous[99-x])
-        
+        print(f"Last 99 digit integer found")
         print(f"{formatted[3:len(formatted)]}", file=result)
 FibNums = BigIntFibonacci()
 FibNums.findMax99digitFib()
