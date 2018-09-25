@@ -6,14 +6,13 @@ def fibonacci_recursive(k, current, last) :
     else : 
         return current
 
-def fib_helper(k) :
-    return fibonacci_recursive(k, 1, 0)
+
 
 
 results = open("CRAB1A/results.txt", "w")
 for k in range (1, 1000):
     try:
-        result = fib_helper(k)
+        result = fibonacci_recursive(k, 1, 0)
         print(f"F({k}) = {result}", file = results)
     except RecursionError:
         print(f"max recursion depth:\t {k-1}", file = results)
